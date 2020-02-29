@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Eilis Lee">
+    <title>MASH Game</title>
+    <link rel="stylesheet" href="css/main.css">
+
+</head>
+
+<body>
+    <header>
+        <h1 class="mash-class" id="mash-class">
+            <i>M</i>*<i>A</i>*<i>S</i>*<i>H</i>
+        </h1>
+        <a>Predict Your Future!</a>
+    </header>
+
+    <main>
+        <div>
+
+            <section class="spouse-class">
+                <header>
+                    <h2>Fill in the blanks below to reveal your future:</h2>
+
+                    <form id="frm1">
+                        <div>
+                            <label for="Spouse">Spouse Name</label>
+                            <input type="text" id="message" name="spouse-input" placeholder="name" required>
+                            <input type="text" id="message" name="spouse-input1" placeholder="name" required>
+                            <input type="text" id="message" name="spouse-input2" placeholder="name" required>
+                        </div>
+                        <div>
+                            <label for="Car">Car</label>
+                            <input type="text" id="car" name="car-input" placeholder="car" required>
+                            <input type="text" id="car" name="car-input1" placeholder="car" required>
+                            <input type="text" id="car" name="car-input2" placeholder="car" required>
+                        </div>
+                        <div>
+                            <label for="Occupation">Occupation</label>
+                            <input type="text" id="occupation" name="occupation-input" placeholder="occupation"
+                                required>
+                            <input type="text" id="occupation" name="occupation-input1" placeholder="occupation"
+                                required>
+                            <input type="text" id="occupation" name="occupation-input2" placeholder="occupation"
+                                required>
+                        </div>
+                        <!-- <input type="button" onclick="myFunction()" value="Submit"> -->
+                        <button id="process-input" type="submit">Reveal your future</button>
+                    </form>
+
+                </header>
+            </section>
+
+            <span id="display-output"></span>
+
+        </div>
+
+    </main>
+
+    <script src="js/main.js" defer></script>
+
+</body>
+
+</html>
