@@ -7,61 +7,125 @@
     <meta name="author" content="Eilis Lee">
     <title>MASH Game</title>
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
 </head>
 
 <body>
-    <header>
-        <h1 class="mash-class" id="mash-class">
-            <i>M</i>*<i>A</i>*<i>S</i>*<i>H</i>
-        </h1>
-        <a>Predict Your Future!</a>
-    </header>
-
     <main>
         <div>
+            <header>
+                <h1 class="mash-class" id="mash-class">
+                    M*A*S*H
+                </h1>
+                <h2>Predict Your Future!</h2>
+                <h3>Fill in the blanks:</h3>
+                <form id="frm1">
+                    <div>
+                        <label for="Spouse">Spouse Name</label>
+                        <input type="text" id="message" name="spouse-input" placeholder="name" required>
+                        <input type="text" id="message" name="spouse-input1" placeholder="name" required>
+                        <input type="text" id="message" name="spouse-input2" placeholder="name" required>
+                    </div>
+                    <div>
+                        <label for="Car">Car</label>
+                        <input type="text" id="car" name="car-input" placeholder="car" required>
+                        <input type="text" id="car" name="car-input1" placeholder="car" required>
+                        <input type="text" id="car" name="car-input2" placeholder="car" required>
+                    </div>
+                    <div>
+                        <label for="Occupation">Occupation</label>
+                        <input type="text" id="occupation" name="occupation-input" placeholder="occupation" required>
+                        <input type="text" id="occupation" name="occupation-input1" placeholder="occupation" required>
+                        <input type="text" id="occupation" name="occupation-input2" placeholder="occupation" required>
+                    </div>
 
-            <section class="spouse-class">
-                <header>
-                    <h2>Fill in the blanks below to reveal your future:</h2>
+                    <button id="process-input" type="submit">Reveal your future</button>
 
-                    <form id="frm1">
-                        <div>
-                            <label for="Spouse">Spouse Name</label>
-                            <input type="text" id="message" name="spouse-input" placeholder="name" required>
-                            <input type="text" id="message" name="spouse-input1" placeholder="name" required>
-                            <input type="text" id="message" name="spouse-input2" placeholder="name" required>
-                        </div>
-                        <div>
-                            <label for="Car">Car</label>
-                            <input type="text" id="car" name="car-input" placeholder="car" required>
-                            <input type="text" id="car" name="car-input1" placeholder="car" required>
-                            <input type="text" id="car" name="car-input2" placeholder="car" required>
-                        </div>
-                        <div>
-                            <label for="Occupation">Occupation</label>
-                            <input type="text" id="occupation" name="occupation-input" placeholder="occupation"
-                                required>
-                            <input type="text" id="occupation" name="occupation-input1" placeholder="occupation"
-                                required>
-                            <input type="text" id="occupation" name="occupation-input2" placeholder="occupation"
-                                required>
-                        </div>
-                        <!-- <input type="button" onclick="myFunction()" value="Submit"> -->
-                        <button id="process-input" type="submit">Reveal your future</button>
-                    </form>
+                    <input type="button" name="clear" value="Clear Form" onclick="clearForm(this.form);">
+                </form>
 
-                </header>
-            </section>
-
-            <span id="display-output"></span>
+            </header>
 
         </div>
 
+        <h3>Hover over image to reveal your fortune</h3>
+        <div class="container">
+            <div class="icon">
+                <div class="iconBx active" data-id="content1">
+                    <img src="images/home.jpg">
+                </div>
+                <div class="iconBx" data-id="content2">
+                    <img src="images/spouse.jpg">
+                </div>
+                <div class="iconBx" data-id="content3">
+                    <img src="images/kids.jpg">
+                </div>
+                <div class="iconBx" data-id="content4">
+                    <img src="images/car.jpg">
+                </div>
+                <div class="iconBx" data-id="content5">
+                    <img src="images/job.jpg">
+                </div>
+                <div class="iconBx" data-id="content6">
+                    <img src="images/money.jpg">
+                </div>
+            </div>
+            <div class="content">
+                <div class="contentBx active" id="content1">
+                    <div class="text">
+                        <h2>Home</h2>
+                        <p id="display-output1">?</p>
+                    </div>
+                </div>
+                <div class="contentBx" id="content2">
+                    <div class="text">
+                        <h2>Spouse</h2>
+                        <p id="display-output2">?</p>
+                    </div>
+                </div>
+                <div class="contentBx" id="content3">
+                    <div class="text">
+                        <h2>Kids</h2>
+                        <p id="display-output3">?</p>
+                    </div>
+                </div>
+                <div class="contentBx" id="content4">
+                    <div class="text">
+                        <h2>Car</h2>
+                        <p id="display-output4">?</p>
+                    </div>
+                </div>
+                <div class="contentBx" id="content5">
+                    <div class="text">
+                        <h2>Occupation</h2>
+                        <p id="display-output5">?</p>
+                    </div>
+                </div>
+                <div class="contentBx" id="content6">
+                    <div class="text">
+                        <h2>Salary</h2>
+                        <p id="display-output6">?</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
 
-    <script src="js/main.js" defer></script>
+    <script src="js/main.js" type="text/javascript" defer></script>
 
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
