@@ -14,44 +14,51 @@
 
 <body>
     <main>
+
+        <h1 class="mash-class" id="mash-class">
+            M*A*S*H
+        </h1>
+        <h2>Predict Your Future!</h2>
+        <h3>Fill in the blanks:</h3>
         <div>
-            <header>
-                <h1 class="mash-class" id="mash-class">
-                    M*A*S*H
-                </h1>
-                <h2>Predict Your Future!</h2>
-                <h3>Fill in the blanks:</h3>
-                <form id="frm1">
-                    <div>
+            <form id="frm1">
+                <div class="row">
+                    <div class="col-md">
                         <label for="Spouse">Spouse Name</label>
-                        <input type="text" id="message" name="spouse-input" placeholder="name" required>
-                        <input type="text" id="message" name="spouse-input1" placeholder="name" required>
-                        <input type="text" id="message" name="spouse-input2" placeholder="name" required>
+                        <input class="form-control" type="text" id="message" name="spouse-input" placeholder="name"
+                            required>
+                        <input class="form-control" type="text" id="message" name="spouse-input1" placeholder="name"
+                            required>
+                        <input class="form-control" type="text" id="message" name="spouse-input2" placeholder="name"
+                            required>
                     </div>
-                    <div>
+                    <div class="col-md">
                         <label for="Car">Car</label>
-                        <input type="text" id="car" name="car-input" placeholder="car" required>
-                        <input type="text" id="car" name="car-input1" placeholder="car" required>
-                        <input type="text" id="car" name="car-input2" placeholder="car" required>
+                        <input class="form-control" type="text" id="car" name="car-input" placeholder="car" required>
+                        <input class="form-control" type="text" id="car" name="car-input1" placeholder="car" required>
+                        <input class="form-control" type="text" id="car" name="car-input2" placeholder="car" required>
                     </div>
-                    <div>
+                    <div class="col-md">
                         <label for="Occupation">Occupation</label>
-                        <input type="text" id="occupation" name="occupation-input" placeholder="occupation" required>
-                        <input type="text" id="occupation" name="occupation-input1" placeholder="occupation" required>
-                        <input type="text" id="occupation" name="occupation-input2" placeholder="occupation" required>
+                        <input class="form-control" type="text" id="occupation" name="occupation-input"
+                            placeholder="occupation" required>
+                        <input class="form-control" type="text" id="occupation" name="occupation-input1"
+                            placeholder="occupation" required>
+                        <input class="form-control" type="text" id="occupation" name="occupation-input2"
+                            placeholder="occupation" required>
                     </div>
-
-                    <button id="process-input" type="submit">Reveal your future</button>
-
-                    <input type="button" name="clear" value="Clear Form" onclick="clearForm(this.form);">
-                </form>
-
-            </header>
-
+                    <div id="buttonDiv">
+                        <button class="btn btn-outline-secondary" id="process-input" type="submit"
+                            onclick="updateButton()">Reveal future</button>
+                        <button class="btn btn-outline-secondary" id="clear-form" type="button" name="clear"
+                            value="Clear Form" onclick="clearForm(this.form);">Clear Form</button>
+                    </div>
+                </div>
+            </form>
         </div>
 
         <h3>Hover over image to reveal your future</h3>
-        <div class="container">
+        <div class="container" id="content">
             <div class="icon">
                 <div class="iconBx active" data-id="content1">
                     <img src="images/home.jpg">

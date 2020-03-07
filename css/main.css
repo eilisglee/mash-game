@@ -5,6 +5,26 @@
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 }
+.mash-class {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+h2 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+h3 {
+  font-size: 1rem;
+}
+
 body{
   display: flex;
   justify-content: center;
@@ -88,4 +108,29 @@ font-size: 3em;
 
 p {
   font-size: 5rem;
+}
+
+#frm1 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  
+}
+
+#buttonDiv {
+  position: relative;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+input[type=text], .txtarea {
+  margin-bottom: 10px;
+}
+
+#process-input {
+  margin-right: 10px;
 }
